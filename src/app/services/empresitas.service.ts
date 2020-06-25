@@ -27,11 +27,11 @@ export class EmpresitasService {
     return this.httpClient.get(this.resourceUrl + Id);
   }
 
-  post(obj:Articulo) {
+  post(obj:Empresitas) {
     return this.httpClient.post(this.resourceUrl, obj);
   }
 
-  put(Id: number, obj:Articulo) {
+  put(Id: number, obj:Empresitas) {
     return this.httpClient.put(this.resourceUrl + Id, obj);
   }
 
