@@ -1,5 +1,7 @@
-export class Empresitas {
-  EquipoNombre: string;
-  EquipoRanking: number;
-  IdEquipo: number;
-};
+export class Empresa{
+  CantidadEmpleados: number;
+  FechaFundacion: string;
+  IdEmpresa: number; 
+  RazonSocial: string;
+
+}

@@ -6,7 +6,7 @@ import {
   HttpParams
 } from "@angular/common/http";
 import { of } from "rxjs";
-import { Empresitas } from "../models/Empresitas";
+import { Empresa } from "../models/Empresitas";
 
 @Injectable({
   providedIn: "root"
@@ -15,7 +15,7 @@ export class EmpresitasService {
   resourceUrl: string;
   constructor(private httpClient: HttpClient) {
     // la barra al final del resourse url es importante para los metodos que concatenan el id del recurso (GetById, Put)
-    this.resourceUrl = "https://pavii.ddns.net/api/equipos";
+    this.resourceUrl = "https://pavii.ddns.net/api/empresas";
   }
 
    get(){
