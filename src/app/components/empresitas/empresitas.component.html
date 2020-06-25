@@ -96,15 +96,16 @@
 	<fieldset [disabled]="AccionABMC==='C'">
 		<!--campo nombre-->
 		<div class="form-group row">
-			<label class="col-form-label col-sm-2 col-sm-offset-2" for="Nombre">Nombre <span
+			<label class="col-form-label col-sm-2 col-sm-offset-2" 
+      for="EquipoNombre">Equipo Nombre <span
                     class="text-danger">*</span></label>
 			<div class="col-sm-6">
-				<input type="text" class="form-control" formControlName="Nombre" 
-         [ngClass]="{'is-invalid': (FormReg.controls.Nombre.touched || submitted)  
-            && FormReg.controls.Nombre.errors}" />
+				<input type="text" class="form-control" formControlName="EquipoNombre" 
+         [ngClass]="{'is-invalid': (FormReg.controls.EquipoNombre.touched || submitted)  
+            && FormReg.controls.EquipoNombre.errors}" />
 
-				<span class="text-danger" *ngIf="(FormReg.controls.Nombre.touched || submitted) 
-                        && FormReg.controls.Nombre.errors?.required">
+				<span class="text-danger" *ngIf="(FormReg.controls.EquipoNombre.touched || submitted) 
+                        && FormReg.controls.EquipoNombre.errors?.required">
                     Dato requerido.
                 </span>
                 <span class="text-danger" *ngIf="(FormReg.controls.Nombre.touched || submitted) 
@@ -115,45 +116,47 @@
 			</div>
 		</div>
 
-		<!--campo precio-->
-		<div class="row form-group">
-			<label class="col-form-label col-sm-2 col-sm-offset-2" for="Precio">Precio <span
-                    class="text-danger">*</span></label>
-			<div class="col-sm-6">
-				<input type="text" name="Precio" class="form-control" formControlName="Precio"
-            [ngClass]="{'is-invalid': (FormReg.controls.Precio.touched || submitted)  
-            && FormReg.controls.Precio.errors}" />
-				<span class="text-danger" *ngIf="(FormReg.controls.Precio.touched || submitted) 
-                       && FormReg.controls.Precio.errors?.required">
-                    Dato requerido.
-                </span>
-				<span class="text-danger" *ngIf="(FormReg.controls.Precio.touched || submitted) 
-               && FormReg.controls.Precio.errors?.pattern">
-                    Dato numérico, 1 a 7 dígitos.
-                </span>
-			</div>
-		</div>
-
-
 		<!--campo stock-->
+
 		<div class="form-group row">
-			<label class="col-form-label col-sm-2 col-sm-offset-2" for="Stock">
-                Stock <span class="text-danger">*</span>
+			<label class="col-form-label col-sm-2 col-sm-offset-2" for="EquipoRanking">
+                Equipo Ranking <span class="text-danger">*</span>
             </label>
 			<div class="col-sm-6">
-				<input type="text" name="Stock" class="form-control" formControlName="Stock"
-        [ngClass]="{'is-invalid': (FormReg.controls.Stock.touched || submitted)  
+				<input type="text" name="EquipoRanking" class="form-control" formControlName="EquipoRanking"
+        [ngClass]="{'is-invalid': (FormReg.controls.EquipoRanking.touched || submitted)  
             && FormReg.controls.Stock.errors}" />
-				<span class="text-danger" *ngIf="(FormReg.controls.Stock.touched || submitted) 
-                        && FormReg.controls.Stock.errors?.required">
+				<span class="text-danger" *ngIf="(FormReg.controls.EquipoRanking.touched || submitted) 
+                        && FormReg.controls.EquipoRanking.errors?.required">
                     Dato requerido.
                 </span>
-				<span class="text-danger" *ngIf="(FormReg.controls.Stock.touched || submitted) 
-                        && FormReg.controls.Stock.errors?.pattern">
+				<span class="text-danger" *ngIf="(FormReg.controls.EquipoRanking.touched || submitted) 
+                        && FormReg.controls.EquipoRanking.errors?.pattern">
                     Dato numérico, 1 a 7 dígitos.
                 </span>
 			</div>
 		</div>
+
+    		<div class="form-group row">
+			<label class="col-form-label col-sm-2 col-sm-offset-2" for="IdEquipo">
+                Id Equipo <span class="text-danger">*</span>
+            </label>
+			<div class="col-sm-6">
+				<input type="text" name="IdEquipo" class="form-control" formControlName="IdEquipo"
+        [ngClass]="{'is-invalid': (FormReg.controls.IdEquipo.touched || submitted)  
+            && FormReg.controls.Stock.errors}" />
+				<span class="text-danger" *ngIf="(FormReg.controls.IdEquipo.touched || submitted) 
+                        && FormReg.controls.IdEquipo.errors?.required">
+                    Dato requerido.
+                </span>
+				<span class="text-danger" *ngIf="(FormReg.controls.IdEquipo.touched || submitted) 
+                        && FormReg.controls.IdEquipo.errors?.pattern">
+                    Dato numérico, 1 a 7 dígitos.
+                </span>
+			</div>
+		</div>
+
+
 
 		<!--campo codigodebarra-->
 		<div class="form-group row">
