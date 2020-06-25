@@ -19,8 +19,6 @@ import { InicioComponent } from "./components/inicio/inicio.component";
 import { ArticulosComponent } from "./components/articulos/articulos.component";
 import { ArticulosFamiliasComponent } from "./components/articulos-familias/articulos-familias.component";
 import { ModalDialogComponent } from "./components/modal-dialog/modal-dialog.component";
-import { EmpresasComponent } from './components/empresas/empresas.component';
-import { EmpresaService } from './services/empresa.service';
 import { EmpresitasComponent } from './components/empresitas/empresitas.component';
 import { EmpresitasService } from './services/empresitas.service';
 
@@ -32,7 +30,6 @@ import { EmpresitasService } from './services/empresitas.service';
     ArticulosComponent,
     ArticulosFamiliasComponent,
     ModalDialogComponent,
-    EmpresasComponent,
     EmpresitasComponent,
   ],
   imports: [
@@ -44,7 +41,6 @@ import { EmpresitasService } from './services/empresitas.service';
       { path: 'inicio', component: InicioComponent },
       { path: 'articulos', component: ArticulosComponent },
       { path: 'articulosfamilias', component: ArticulosFamiliasComponent },
-      { path: 'empresas', component: EmpresasComponent },
       { path: 'empresitas', component: EmpresitasComponent }
     ]),
     NgbPaginationModule,
@@ -53,7 +49,7 @@ import { EmpresitasService } from './services/empresitas.service';
   entryComponents: [ModalDialogComponent],
   providers: [
      {provide: APP_BASE_HREF, useValue : '/' },
-    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true, providers: [EmpresaService], providers: [EmpresitasService] }
+    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true, providers: [EmpresitasService] }
   ],
   bootstrap: [AppComponent]
 })

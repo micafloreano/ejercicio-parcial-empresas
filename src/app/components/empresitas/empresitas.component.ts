@@ -4,8 +4,8 @@ import {EmpresaService} from '../../services/empresitas.service'
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-empresas',
-  templateUrl: './empresas.component.html',
-  styleUrls: ['./empresas.component.css']
+  templateUrl: './empresitas.component.html',
+  styleUrls: ['./empresitas.component.css']
 })
 export class EmpresasComponent implements OnInit {
 
