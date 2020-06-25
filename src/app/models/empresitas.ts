@@ -5,3 +5,4 @@ export class Empresa{
   RazonSocial: string;
 
 }
+

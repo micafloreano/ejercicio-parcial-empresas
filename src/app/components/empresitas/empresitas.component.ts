@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {Empresa} from '../../models/empresa';
-import {EmpresaService} from '../../services/empresa.service'
+import {Empresa} from '../../models/empresitas';
+import {EmpresaService} from '../../services/empresitas.service'
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Component({
-  selector: 'app-empresitas',
-  templateUrl: '././empresitas.component.html',
-  styleUrls: ['./empresitas.component.css']
+  selector: 'app-empresas',
+  templateUrl: './empresas.component.html',
+  styleUrls: ['./empresas.component.css']
 })
-export class EmpresitasComponent implements OnInit {
+export class EmpresasComponent implements OnInit {
 
   Titulo = "Empresas";
   Items: Empresa [] = [];

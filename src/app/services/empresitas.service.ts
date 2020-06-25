@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import {
   HttpClient,
   HttpHeaders,
@@ -6,36 +6,28 @@ import {
   HttpParams
 } from "@angular/common/http";
 import { of } from "rxjs";
-import { Empresa } from "../models/Empresitas";
-
+import { Empresa } from "../models/empresitas";
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
-export class EmpresitasService {
+
+export class EmpresaService {
   resourceUrl: string;
-  constructor(private httpClient: HttpClient) {
-    // la barra al final del resourse url es importante para los metodos que concatenan el id del recurso (GetById, Put)
-    this.resourceUrl = "https://pavii.ddns.net/api/empresas";
-  }
+
+
+  constructor(private hhtpCliente: HttpClient) {
+    this.resourceUrl = "https://pavii.ddns.net/api/empresas"
+     
+   }
 
    get(){
-     return this.httpClient.get(this.resourceUrl)
+     return this.hhtpCliente.get(this.resourceUrl)
    }
 
 
-  getById(Id: number) {
-    return this.httpClient.get(this.resourceUrl + Id);
+  put(Id: number, obj:Empresa) {
+    return this.hhtpCliente.put(this.resourceUrl +'/'+ Id, obj);
   }
 
-  post(obj:Empresitas) {
-    return this.httpClient.post(this.resourceUrl, obj);
-  }
+   }
 
-  put(Id: number, obj:Empresitas) {
-    return this.httpClient.put(this.resourceUrl + Id, obj);
-  }
-
-  delete(Id) {
-    return this.httpClient.delete(this.resourceUrl + Id);
-  }
-}
